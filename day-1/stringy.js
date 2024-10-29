@@ -12,24 +12,28 @@
  * TIP: In JavaScript, how can we decipher the length of a String?
  * work?
  */
-
+//I: input string
+//O: output string length
+//C:
+//E:
 
 
 
 function length(string) {
     // YOUR CODE BELOW HERE //
-
-   
-    
+var output = string.length;
+return output
+} 
     // YOUR CODE ABOVE HERE //
-}
+
 
 /**
  * Given an input String, return a new String forced to lowercase.
  */
 function toLowerCase(string) {
     // YOUR CODE BELOW HERE //
-   
+var output = string.toLowerCase();
+    return output
 
     // YOUR CODE ABOVE HERE //
 }
@@ -39,6 +43,8 @@ function toLowerCase(string) {
  */
 function toUpperCase(string) {
     // YOUR CODE BELOW HERE //
+var output = string.toUpperCase();
+return output
 
 
 
@@ -60,11 +66,14 @@ function toUpperCase(string) {
  */
 function toDashCase(string) {
     // YOUR CODE BELOW HERE //
+var output = string.toLowerCase()
+return output.replace(' ','-')
+}
 
 
 
     // YOUR CODE ABOVE HERE //
-}
+
 
 /**
  * Given an input String and a single character, return true if the String
