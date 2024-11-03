@@ -20,24 +20,25 @@
  */
 
 function reverseString(input) {
-    // YOUR CODE GOES BELOW HERE //
-    //grasp, plan, code, debug
-      //I: input is a string
-      //O: output is also a string
-      //C: needs to use a loop to iterate through string
-      //E:
+  // YOUR CODE GOES BELOW HERE //
+  //grasp, plan, code, debug
+    //I: input is a string
+    //O: output is also a string
+    //C: needs to use a loop to iterate through string
+    //E:
 
-    //create something to collect the output to be returned
-    var output = ''
-    //make a loop to iterate over the values in the string
-    //loop needs to access each value, then reverse the order of values presented
-    for (var i = string.length -1; i >= string.length; i--){
-      console.log(string[i])
-    };
-    //make sure to return output
-    return output
-    
-    // YOUR CODE GOES ABOVE HERE //
+  //create something to collect the output to be returned
+  var output = []
+  //make a loop to iterate over the values in the string
+  //loop needs to access each value, then reverse the order of values presented
+  for (var i = input.length - 1; i >= 0; i--){
+   output += input[i]
+   
+  };
+  //make sure to return output
+  return output
+  
+  // YOUR CODE GOES ABOVE HERE //
 }
 
 

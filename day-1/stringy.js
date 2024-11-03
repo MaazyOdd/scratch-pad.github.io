@@ -67,7 +67,7 @@ return output
 function toDashCase(string) {
     // YOUR CODE BELOW HERE //
 var output = string.toLowerCase()
-return output.replace(' ','-')
+return output.replaceAll([' '],'-')
 }
 
 
@@ -88,10 +88,19 @@ return output.replace(' ','-')
  *      ensure uppercase and lowercase can be compared equally?
  */
 function beginsWith(string, char) {
+var output = null
     // YOUR CODE BELOW HERE //
-
-    
-
+//I: inputs are a string and a single character
+//O: output would be a boolean value
+//C:
+//E:
+if (string[0].toLowerCase() === char.toLowerCase()){
+    output = true
+}
+else {
+    output = false
+}
+return output
     // YOUR CODE ABOVE HERE //
 }
 
@@ -109,9 +118,19 @@ function beginsWith(string, char) {
  */
 function endsWith(string, char) {
     // YOUR CODE BELOW HERE //
+  
+var output = null
+var newString = string.toLowerCase();
+var newChar = char.toLowerCase();
 
+if (newString[newString.length - 1] === newChar){
+  output = true
+}
+else
+  {output = false
+  }
 
-
+return output
     // YOUR CODE ABOVE HERE //
 }
 
@@ -122,7 +141,7 @@ function endsWith(string, char) {
  */
 function concat(stringOne, stringTwo) {
     // YOUR CODE BELOW HERE //
-
+return stringOne + stringTwo
 
 
     // YOUR CODE ABOVE HERE //
@@ -141,7 +160,8 @@ function concat(stringOne, stringTwo) {
 function join(stringOne, stringTwo) {
     // YOUR CODE BELOW HERE //
     var args = Array.from(arguments);
-
+    var newArgs =args.join('')
+    return newArgs
 
     // YOUR CODE ABOVE HERE //
 }
@@ -157,9 +177,12 @@ function join(stringOne, stringTwo) {
  */
 function longest(stringOne, stringTwo) {
     // YOUR CODE BELOW HERE //
-
-
-
+if (stringOne.length > stringTwo.length){
+    return stringOne
+}
+else{
+    return stringTwo
+}
     // YOUR CODE ABOVE HERE //
 }
 
@@ -172,9 +195,8 @@ function longest(stringOne, stringTwo) {
  */
 function sortAscending(stringOne, stringTwo) {
     // YOUR CODE BELOW HERE //
-
-
-
+var stringSort = stringTwo.localeCompare(stringOne)
+return stringSort
     // YOUR CODE ABOVE HERE //
 }
 
@@ -188,9 +210,8 @@ function sortAscending(stringOne, stringTwo) {
  */
 function sortDescending(stringOne, stringTwo) {
     // YOUR CODE BELOW HERE //
-
-
-
+    var stringSort = stringOne.localeCompare(stringTwo)
+    return stringSort
 
     // YOUR CODE ABOVE HERE //
 }
