@@ -16,9 +16,8 @@
  */
 function isArray(value) {
     // YOUR CODE BELOW HERE //
-    
-    
-    
+var output = Array.isArray(value)
+return output
     
     // YOUR CODE ABOVE HERE //
 }
@@ -38,13 +37,13 @@ function isArray(value) {
  */
 function isObject(value) {
     // YOUR CODE BELOW HERE //
-    
+    return value && typeof value === 'object' && value.constructor === Object;
+}
 
     
     
     
     // YOUR CODE ABOVE HERE //
-}
 
 
 
