@@ -29,7 +29,9 @@ return function(value){
  */
 function createLessThanFilter(base) {
     // YOUR CODE BELOW HERE //
-
+return function(value){
+    return value < base
+}
   
     
     
@@ -45,7 +47,9 @@ function createLessThanFilter(base) {
  */
 function createStartsWithFilter(startsWith) {
     // YOUR CODE BELOW HERE //
-    
+return function(string){
+    return string.toUpperCase() === startsWith.toUpperCase()
+}
     
     
     
