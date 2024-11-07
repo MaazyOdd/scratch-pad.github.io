@@ -35,7 +35,7 @@
 
 // YOUR CODE GOES BELOW HERE //
 function makeContact(id, nameFirst, nameLast) {
-    
+ return {id, nameFirst, nameLast}
 } 
 
 
@@ -48,7 +48,12 @@ function makeContactList() {
     
     return {
         // we implemented the length api for you //
-       
+    length(){return contacts.length}, 
+    //addContact(contact){}
+    //findContact(fullName){}
+    //removeContact(contact){}
+    //printAllContactNames(){}
+
     }
 }
 

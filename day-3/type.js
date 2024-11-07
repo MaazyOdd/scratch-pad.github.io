@@ -37,7 +37,7 @@ return output
  */
 function isObject(value) {
     // YOUR CODE BELOW HERE //
-    return value && typeof value === 'object' && value.constructor === Object;
+
 }
 
     
@@ -55,8 +55,12 @@ function isObject(value) {
  */
 function isCollection(value) {
     // YOUR CODE BELOW HERE //
+    if (value === Array){
+    return Array.prototype.toString.call(value) === "[array Array]"}
+    else
+    return Object.prototype.toString.call(value) === "[object Object]"
     
-    
+
     
     
     // YOUR CODE ABOVE HERE //
@@ -83,10 +87,7 @@ function isCollection(value) {
  */ 
 function typeOf(value) {
     // YOUR CODE BELOW HERE //
-    
-    
-    
-    
+return typeOf(value).toString.call(value)
     // YOUR CODE ABOVE HERE //
 }
 
