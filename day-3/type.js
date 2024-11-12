@@ -2,6 +2,8 @@
 
 'use strict';
 
+const { result } = require("lodash");
+
 /**
  * IN CLASS EXERCISE: TYPE
  */
@@ -37,7 +39,7 @@ return output
  */
 function isObject(value) {
     // YOUR CODE BELOW HERE //
-
+return Object.prototype.toString.call(value) === "[object Object]"
 }
 
     
@@ -55,16 +57,22 @@ function isObject(value) {
  */
 function isCollection(value) {
     // YOUR CODE BELOW HERE //
-    if (value === Array){
-    return Array.prototype.toString.call(value) === "[array Array]"}
-    else
-    return Object.prototype.toString.call(value) === "[object Object]"
+if (Array.isArray(value)){
+    return true}
+else if (Object.prototype.toString.call(value) === "[object Object]"){
+    return true}
+else {
+    return false
+}
+}
+
+    
     
 
     
     
     // YOUR CODE ABOVE HERE //
-}
+
 
 /**
  * Given an input value, return the type of the value as a String
@@ -87,7 +95,23 @@ function isCollection(value) {
  */ 
 function typeOf(value) {
     // YOUR CODE BELOW HERE //
-return typeOf(value).toString.call(value)
+    var s = typeof value;
+    if (s === 'object') {
+        if (value) {
+            if (Object.prototype.toString.call(value) == '[object Array]') {
+                s = 'array';
+            }
+
+        } 
+        else if (Object instanceof Date == '[object Object'){
+            s = 'date';
+        }
+        else {
+            s = 'null';
+        }
+    }
+    return s;
+
     // YOUR CODE ABOVE HERE //
 }
 
